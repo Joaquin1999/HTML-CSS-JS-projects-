@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Login Page </title>
+        <style>
+
+.content {
+    margin: 25% 40%;
+  display: block;
+  width:500px;
+  text-align:center;
+
+  
+ 
+}
+
+
+            label{
+                float:left;
+                width:5em;
+            }
+            input{
+
+                margin-left:em;
+                margin-bottom:em;
+                padding:5px 5px;
+                border-color: rgb(218, 199, 199);
+              
+                
+            }
+            
+     
+
+            legend{
+                
+                    background-color:rgb(49, 18, 248);
+                    color:rgb(236, 229, 232);
+                    padding:3px,6px;
+                    width:100px;
+                    text-align:center;
+            }
+            fieldset{
+                    
+                padding:12px 24px;
+                width:200px;
+                border-color:rgb(219, 221, 225);
+                border-radius:5px;
+                background-color: rgba(128, 240, 240, 0.5);
+               
+                
+            }
+            #submit1{
+
+                color:aliceblue;
+                border-radius: 5px;
+                border-color: blue;
+                width:100px;
+                height:30px;
+                background-color:rgb(44, 30, 243);
+                opacity:0.8;
+                transition:0.5s;
+
+            }
+            #submit1:hover
+            {
+                background-color: rgb(11, 182, 245);
+            }
+
+            </style>
+            <script>
+               function validate(){
+                 
+                    if(document.forms[0].elements[0].value.length<1)
+                    {
+                        alert('UserName Cannot Empty');
+                        document.forms[0].elements[0].focus();
+                    }
+                    else if(document.forms[0].elements[1].value.length<1){
+                          
+                        alert('Password Cannot Empty');
+                        document.forms[0].elements[1].focus();
+                        
+                    }
+                    else if(document.forms[0].elements[0].value=='Joaquin'&& document.forms[0].elements[1].value=='kalarani')
+                    alert("Login successfully");
+                    else
+                    alert('Invalid User Credentials');
+
+
+
+                }
+                </script>
+    </head>
+    <body background="https://img3.goodfon.com/original/1920x1080/f/ad/polyarnyy-medved-led-sneg.jpg">
+          <div class="content">
+        <fieldset style="width:300px">
+            <legend>Login Form</legend>
+        <form>
+            <label for="txtUser">UserName :</label>
+            <input type="text" autofocus><br><br>
+            <label for="txtpwd">Password :</label>
+            <input type="password" name="txtpwd"><br><br>
+            
+           
+            <input type="submit" name="submit" id="submit1" value="Login" onclick="validate()">
+
+
+        </form>
+        </fieldset>
+        </div>
+    </body>
+    
+    </html>
